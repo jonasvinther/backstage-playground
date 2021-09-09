@@ -1,11 +1,14 @@
 version: '3'
 services:
   backstage:
-    image: backstage
+    image: backstage:latest
     environment:
       # This value must match the name of the postgres configuration block.
       POSTGRES_HOST: db
       POSTGRES_USER: postgres
+      GITHUB_TOKEN: $GITHUB_TOKEN
+      AUTH_GITHUB_CLIENT_ID: $AUTH_GITHUB_CLIENT_ID
+      AUTH_GITHUB_CLIENT_SECRET: $AUTH_GITHUB_CLIENT_SECRET
     ports:
       - '7000:7000'
 
