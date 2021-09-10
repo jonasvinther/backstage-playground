@@ -75,10 +75,11 @@ catalog:
   rules:
     - allow: [Component, System, API, Group, User, Resource, Location]
   locations:
+    - type: url
+      target: https://github.com/jonasvinther/spring-boot-backstage/blob/master/catalog-info.yaml
     # Backstage example components
     - type: url
       target: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/all-components.yaml
-
     # Backstage example systems
     - type: url
       target: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/all-systems.yaml
